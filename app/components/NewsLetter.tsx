@@ -72,7 +72,7 @@ export default function Newsletter({}: Props) {
               }
 
               setStatus(201);
-              setMessage("Thank you for subscribing to my newsletter ⚡.");
+              setMessage("Sikeres fel iratkozás! ⚡.");
               setShowConfetti(true);
               setRun(true);
               setTimeout(() => {
@@ -85,7 +85,7 @@ export default function Newsletter({}: Props) {
             } catch (error) {
               setStatus(500);
               setMessage(
-                "Error joining the newsletter."
+                "Hiba."
               );
               setTimeout(() => {
                 setMessage("");
