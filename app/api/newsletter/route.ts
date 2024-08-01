@@ -6,7 +6,7 @@ export async function POST(req: Request, res: NextApiResponse) {
   if (!email) {
     return res.status(400).json({ error: "Email is required" });
   }
-
+  //dont publish keys
   const MailchimpKey = process.env.MAILCHIMP_API_KEY;
   const MailchimpServer = process.env.MAILCHIMP_API_SERVER;
   const MailchimpAudience = process.env.MAILCHIMP_AUDIENCE_ID;
