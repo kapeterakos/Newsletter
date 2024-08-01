@@ -29,7 +29,7 @@ const SocialMedia: React.FC = () => {
           <img src="/images/instagram.svg" alt="Instagram" className="w-12 h-12" />
         </a>
         <a 
-          href="https://www.linkedin.com/in/yourprofile" 
+          href="https://www.tiktok.com/explore" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="absolute left-0 top-1/2 transform -translate-y-1/2 w-12 h-12 flex justify-center items-center"
