@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 const dmSans = DM_Sans({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 export const metadata = {
-  title: "Newsletter | Ebraj",
+  title: "Spark | Newsletter",
   description:
-    "Basic Newsletter built using Next13, Typescript & Mailchimp by Ebraj.",
+    "Newsletter",
 };
 
 export default function RootLayout({

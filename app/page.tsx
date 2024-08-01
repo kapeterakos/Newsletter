@@ -1,12 +1,11 @@
 "use client";
-import Github from "./components/Github";
-import NewsLetter from "./components/NewsLetter";
+import Hero from "./components/Hero";
+
 
 export default function Home() {
   return (
-    <>
-      <Github />
-      <NewsLetter />
-    </>
+    <div className="bg-banner bg-no-repeat bg-cover">
+      <Hero/>
+    </div>
   );
 }

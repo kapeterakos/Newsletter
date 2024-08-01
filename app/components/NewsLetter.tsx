@@ -9,7 +9,7 @@ const requiredSchema = Yup.object({
   email: Yup.string().email("Invalid email").required("Email is required"),
 });
 
-export default function NewsLetter({}: Props) {
+export default function Newsletter({}: Props) {
   const [status, setStatus] = useState<number | null>(null);
   const [message, setMessage] = useState<string>("");
   const [buttonDisabled, setButtonDisabled] = useState<boolean>(false);
@@ -40,21 +40,7 @@ export default function NewsLetter({}: Props) {
           onConfettiComplete={() => setShowConfetti(false)}
         />
       )}
-      <div className="w-full p-5 md:p-6 space-y-5 bg-white shadow-md rounded-xl md:max-w-[600px]">
-        {/* Header and description */}
-        <div className="pb-2 space-y-3">
-          <h1 className="text-2xl font-black sm:text-2.5xl">
-            Subscribe to Newsletter!
-          </h1>
-          <p className="text-gray-600">
-            Receive notifications of high-quality articles about frontend
-            development and other relevant topics delivered straight to your
-            inbox. You will receive a monthly email from me, ensuring a
-            spam-free experience.
-          </p>
-        </div>
-
-        {/* Formik */}
+      <div className="w-full p-5 md:p-6 space-y-5 shadow-md rounded-xl md:max-w-[600px] bg-blue-600">
         <Formik
           initialValues={{
             email: "",
@@ -76,7 +62,7 @@ export default function NewsLetter({}: Props) {
               if (datas.status >= 400) {
                 setStatus(datas.status);
                 setMessage(
-                  "Error joining the newsletter. You can directly contact me at github@ebraj."
+                  "Error joining the newsletter."
                 );
                 setTimeout(() => {
                   setMessage("");
@@ -86,7 +72,7 @@ export default function NewsLetter({}: Props) {
               }
 
               setStatus(201);
-              setMessage("Thank you for subscribing my newsletter 👻.");
+              setMessage("Thank you for subscribing to my newsletter ⚡.");
               setShowConfetti(true);
               setRun(true);
               setTimeout(() => {
@@ -99,7 +85,7 @@ export default function NewsLetter({}: Props) {
             } catch (error) {
               setStatus(500);
               setMessage(
-                "Error joining the newsletter. You can directly contact me at github@ebraj."
+                "Error joining the newsletter."
               );
               setTimeout(() => {
                 setMessage("");
@@ -114,15 +100,15 @@ export default function NewsLetter({}: Props) {
                 type="email"
                 name="email"
                 className="w-full px-5 py-3 bg-gray-100 rounded-md outline-none grow"
-                placeholder="Enter your email"
+                placeholder="Email cím"
                 autoComplete="off"
               />
               <button
-                className="px-5 py-3 font-bold text-gray-100 transition-all bg-gray-800 rounded-md hover:bg-gray-900 hover:scale-105 disabled:opacity-80"
+                className="px-5 py-3 font-bold text-gray-100 transition-all bg-gray-800 rounded-md hover:bg-cyan-400 hover:scale-105 disabled:opacity-80"
                 type="submit"
                 disabled={buttonDisabled}
               >
-                {submitting ? "Submitting" : "Submit"}
+                {submitting ? "Submitting" : "Küldés"}
               </button>
             </div>
             {message && (
